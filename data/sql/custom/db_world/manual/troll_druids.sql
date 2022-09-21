@@ -81,7 +81,7 @@ INSERT IGNORE INTO `player_levelstats` VALUES
 ('8', '11', '79', '85', '86', '95', '141', '156'),
 ('8', '11', '80', '86', '87', '97', '143', '159');
 
-insert IGNORE into acore_world_dev.playercreateinfo VALUES (8, 11, 1, 14, -618.518, -4251.67, 38.718, 0);
+insert IGNORE into playercreateinfo VALUES (8, 11, 1, 14, -618.518, -4251.67, 38.718, 0);
 
 INSERT IGNORE INTO `playercreateinfo_action` VALUES
 ('8', '11', '0', '5176', '0'),

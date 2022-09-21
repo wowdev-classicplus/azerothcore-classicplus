@@ -1,0 +1,23 @@
+name: Restart-WoW
+
+on:
+  push:
+    branches: [ "dev", "test" ]
+
+  workflow_dispatch:
+    inputs:
+      restartRealm:
+        description: 'Restart login service as well as realm/server'
+        required: true
+        default: false
+        type: boolean
+
+jobs:
+  Restart-WoW-Server:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    steps:
+      - name: Stop server gracefully
+        shell: pwsh
+        run: taskkill /IM worldserver.exe /F
